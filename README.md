@@ -6,6 +6,15 @@ A modern e-commerce product catalog built using **Vanilla JavaScript (ES6 Module
 
 This application consumes product data from the **DummyJSON REST API** and renders all products dynamically into the browser.
 
+## 🌐 Live Demo
+
+🔗 **https://javascript-product-catalog.vercel.app/**
+
+Try the application here:
+https://javascript-product-catalog.vercel.app/
+
+---
+
 **API Endpoint**
 
 > https://dummyjson.com/products
