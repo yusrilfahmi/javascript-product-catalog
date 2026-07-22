@@ -1,0 +1,395 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  font-family: "PT Sans";
+}
+.bungkusKatalog {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.katalog {
+  position: relative;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border: 1px solid black;
+  text-align: center;
+  border-radius: 10px;
+  flex: 0 0 20%;
+  align-items: center;
+}
+
+.namaProduk {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.harga::before {
+  content: "$";
+}
+
+.rating::before {
+  content: "⭐ ";
+}
+
+.harga::after {
+  content: " USD";
+}
+
+.img {
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  object-fit: cover;
+}
+
+.namaKategori {
+  font-size: 17px;
+}
+
+.btnCheckOut {
+  padding: 10px;
+  width: 80%;
+  border: 2px solid rgba(128, 128, 128, 0.734);
+  border-radius: 10px;
+  background-color: rgb(47, 113, 255);
+  font-weight: bold;
+  font-size: 15px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in;
+  color: white;
+  margin: 10px;
+}
+
+.btnCheckOut:hover {
+  scale: 0.95;
+  background-color: rgb(41, 98, 220);
+}
+
+.availableStatus {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  border: 2px solid black;
+  padding: 7px;
+  width: 30%;
+  border-radius: 10px;
+  background-color: greenyellow;
+  font-weight: bold;
+  opacity: 0.7;
+}
+
+.tampilPopUp,
+.backgroundPopUpCheckOut,
+.tampilkanCheckOutBerhasil {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.597);
+  right: 0;
+  top: 0;
+  text-align: center;
+  align-content: center;
+}
+
+.centerPopUp {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  margin: 0px auto;
+  background-color: white;
+  text-align: justify;
+  padding: 20px;
+  border-radius: 30px;
+}
+
+.popUpAtas {
+  display: flex;
+  gap: 10px;
+}
+
+.popUpAtas .img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+}
+.deskripsiPopUp {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-family: "PT Sans";
+  justify-content: space-evenly;
+}
+.titlePopup {
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.descriptionPopup {
+  font-size: 17px;
+  color: rgb(150, 150, 150);
+}
+
+.pricePopup::before {
+  content: "$";
+}
+
+.pricePopup {
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.popUpBawah {
+  bottom: 15px;
+  display: flex;
+  gap: 10px;
+  justify-content: space-evenly;
+  font-family: "PT Sans";
+  margin-top: 20px;
+}
+
+.buttonAccept,
+.buttonDenied {
+  padding: 10px;
+  border-radius: 10px;
+  width: 300px;
+  font-weight: bold;
+  font-size: 15px;
+  color: white;
+}
+
+.buttonAccept {
+  background-color: rgb(103, 233, 129);
+}
+
+.buttonDenied {
+  background-color: rgb(244, 85, 85);
+}
+
+.buttonAccept:hover,
+.buttonDenied:hover {
+  cursor: pointer;
+  scale: 0.95;
+}
+
+.navbar {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 20px;
+  position: sticky;
+  top: 0;
+  height: 70px;
+  background-color: rgb(41, 98, 220);
+  z-index: 1;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.buttonSearch {
+  display: flex;
+  padding: 10px;
+  width: 45px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  height: 40px;
+  box-shadow: 3px 5px 10px rgba(128, 128, 128, 0.815);
+  background-color: rgb(227, 229, 227);
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  align-items: center;
+}
+
+.search {
+  height: 40px;
+  border-radius: 20px;
+  border: none;
+  width: 300px;
+  padding: 0px 20px;
+  box-shadow: 3px 5px 10px rgba(128, 128, 128, 0.815);
+}
+
+.buttonKategori,
+.arraySort,
+.buttonCheckout,
+.btnConfirmCheckOut {
+  height: 40px;
+  width: 150px;
+  border-radius: 20px;
+  border: none;
+  font-family: "PT Sans";
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.buttonCheckout {
+  margin-right: 20px;
+}
+
+.PopUpCheckOut {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  position: relative;
+  height: 70%;
+  width: 50%;
+  background-color: white;
+  margin: 0px auto;
+  padding: 20px;
+  border-radius: 20px;
+  overflow: auto;
+  padding-top: 70px;
+}
+
+.confirmCheckOut {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(128, 128, 128, 0.235);
+  padding: 15px;
+  z-index: 1;
+  align-items: center;
+}
+
+.closeCheckOut {
+  display: flex;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: white;
+  border: 2px solid grey;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.deskripsiCheckOut {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: left;
+  justify-content: space-between;
+}
+
+.imgItem {
+  width: 70px;
+  height: 70px;
+}
+
+.itemCheckOut {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  padding: 10px;
+  border: 2px dashed gray;
+  border-radius: 20px;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.judulItem {
+  font-weight: bold;
+  font-size: 25px;
+  letter-spacing: 2px;
+}
+
+.priceItem::before {
+  content: "$";
+}
+
+.priceItem {
+  color: grey;
+  font-size: 20px;
+}
+
+.totalCheckOut {
+  font-weight: bold;
+  font-size: 28px;
+}
+
+.btnHapusItem {
+  width: 35px;
+  height: 35px;
+  border-radius: 5px;
+  border: none;
+  margin-right: 5px;
+  background-color: rgb(189, 69, 69);
+  color: white;
+  cursor: pointer;
+}
+
+.imgDescCheckOut {
+  display: flex;
+  gap: 10px;
+}
+.setQty {
+  display: flex;
+  gap: 20px;
+
+  align-items: center;
+  text-align: center;
+  align-content: center;
+  justify-content: center;
+}
+.qtyAdd,
+.qtyDel {
+  background-color: white;
+  border: none;
+  cursor: pointer;
+  margin-top: 2px;
+}
+
+.qtyCheckOut {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.popUpCheckOutBerhasil {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 500px;
+  background-color: white;
+  margin: 0px auto;
+  padding: 100px;
+  border-radius: 20px;
+}
+
+.svgImgCheckOut {
+  color: greenyellow;
+}
+
+.svgImgCheckOut svg {
+  width: 150px;
+  height: 150px;
+}
+
+.textCheckOutBerhasil {
+  font-weight: bold;
+  font-size: 25px;
+}
