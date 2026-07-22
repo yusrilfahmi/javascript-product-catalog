@@ -10,9 +10,6 @@ This application consumes product data from the **DummyJSON REST API** and rende
 
 🔗 **https://javascript-product-catalog.vercel.app/**
 
-Try the application here:
-https://javascript-product-catalog.vercel.app/
-
 ---
 
 **API Endpoint**
