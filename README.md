@@ -18,19 +18,27 @@ The project was created as part of my JavaScript learning journey before moving 
 
 ### Home Page
 
-> _Add Screenshot Here_
+![Home](./screenshot/homescreen.png)
 
 ### Product Detail
 
-> _Add Screenshot Here_
+![Detail](./screenshot/popUpItems.png)
 
 ### Shopping Cart
 
-> _Add Screenshot Here_
+![Shopping](./screenshot/keranjang.png)
 
 ### Checkout Success
 
-> _Add Screenshot Here_
+![Checkout](./screenshot/checkoutBerhasil.png)
+
+### Pencarian Refresh Real Time
+
+![Pencarian](./screenshot/pencarian.png)
+
+### Sorting Items
+
+![Sorting](./screenshot/sortingBarangTermahal.png)
 
 ---
 
